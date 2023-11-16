@@ -10,7 +10,7 @@
     </UserControl.Resources>
 
     <Grid>
-        <Button
+        <Button IsEnabled="False"
             Height="{Binding ButtonHeight, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
             Width="{Binding ButtonWidth, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
             Background="{Binding ButtonBackground, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
@@ -44,6 +44,13 @@
                                     <!-- Mouse over case -->
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter TargetName="ButtonBorder" Property="Background" Value="{Binding MouseOverButtonBackground, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
+                                        <Setter TargetName="ButtonBorder" Property="BorderBrush" Value="{Binding MouseOverButtonBorderBrush, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
+                                    </Trigger>
+                                    
+                                    <!-- Disabled case -->
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter TargetName="ButtonBorder" Property="Background" Value="{StaticResource DisabledButtonBackground}"/>
+                                        <Setter TargetName="ButtonBorder" Property="BorderBrush" Value="{StaticResource DisabledButtonBorderBrush}"/>
                                     </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>

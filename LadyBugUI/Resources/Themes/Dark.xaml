@@ -9,6 +9,7 @@
     
     <Color x:Key="ControlFillColorDefault">#0FFFFFFF</Color>
     <Color x:Key="ControlFillColorSecondary">#15FFFFFF</Color>
+    <Color x:Key="ControlFillColorDisabled">#0BFFFFFF</Color>
 
     <Color x:Key="ControlStrokeColorDefault">#12FFFFFF</Color>
     <Color x:Key="ControlStrokeColorSecondary">#18FFFFFF</Color>
@@ -16,9 +17,6 @@
     <!-- #Brushes -->
     
     <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource ControlFillColorDefault}"/>
-    
-    <!-- #Button -->
-    <SolidColorBrush x:Key="MouseOverButtonBackground" Color="{StaticResource ControlFillColorSecondary}"/>
 
     <!-- #Elevation border brushes -->
 
@@ -31,5 +29,10 @@
             <GradientStop Offset="1.0" Color="{StaticResource ControlStrokeColorDefault}"/>
         </LinearGradientBrush.GradientStops>
     </LinearGradientBrush>
+
+    <!-- #Button -->
+    <SolidColorBrush x:Key="DisabledButtonBackground" Color="{StaticResource ControlFillColorDisabled}"/>
+    <SolidColorBrush x:Key="DisabledButtonBorderBrush" Color="{StaticResource ControlStrokeColorDefault}"/>
+    <SolidColorBrush x:Key="MouseOverButtonBackground" Color="{StaticResource ControlFillColorSecondary}"/>
 
 </ResourceDictionary>
