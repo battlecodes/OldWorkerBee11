@@ -6,10 +6,16 @@
              xmlns:local="clr-namespace:LadyBugUI.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/LadyBugUI;component/Resources/LadyBugUI.xaml"/>
+    </UserControl.Resources>
     
     <Grid>
-        <Label>
-            
+        <Label Content="Test Label">
+            <Label.Style>
+                <Style TargetType="Label"
+                       BasedOn="{StaticResource DefaultButtonLabelStyle}"/>
+            </Label.Style>
         </Label>
     </Grid>
     

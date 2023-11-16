@@ -9,7 +9,7 @@
     
     <!-- #Labels -->
     <Style x:Key="DefaultLabelStyle" TargetType="Label">
-        <Setter Property="Foreground" Value="{StaticResource TextFillColorPrimary}"/>
+        <Setter Property="Foreground" Value="{StaticResource LabelForeground}"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
         <Setter Property="FontSize" Value="{StaticResource ControlContentThemeFontSize}"/>
