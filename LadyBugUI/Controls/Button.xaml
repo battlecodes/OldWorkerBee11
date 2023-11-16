@@ -75,17 +75,18 @@
             <!-- #Image -->
                 <Image
                 Grid.Column="0"
-                Source="/Resources/Images/Icons/sliders/sliders_black.png">
+                Source="/LadyBugUI;component/Resources/Images/Icons/sliders/sliders_white.png"
+                >
                     <Image.Style>
                         <Style TargetType="Image"
-                               BasedOn="{StaticResource DefaultButtonIconStyle}"/>
+                               BasedOn="{StaticResource DefaultButtonImageStyle}"/>
                     </Image.Style>
                 </Image>
 
                 <Label
                     Grid.Column="1"
                     Content="Test button"
-                    Foreground="Blue"
+                    Foreground="{Binding ButtonForeground, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
                     FontSize="14"
                     FontWeight="Normal">
                     <Label.Style>

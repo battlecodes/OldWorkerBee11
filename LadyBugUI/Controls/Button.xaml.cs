@@ -46,6 +46,14 @@ namespace LadyBugUI.Controls
                 new PropertyMetadata(
                     _rsc["ControlElevationBorderBrush"]));
 
+        public static readonly DependencyProperty ButtonForegroundProperty =
+            DependencyProperty.Register(
+                "ButtonForeground",
+                typeof(Brush),
+                typeof(Button),
+                new PropertyMetadata(
+                    _rsc["ButtonForeground"]));
+
         public static readonly DependencyProperty ButtonBorderThicknessProperty =
             DependencyProperty.Register(
                 "ButtonBorderThickness",
@@ -116,6 +124,13 @@ namespace LadyBugUI.Controls
         {
             get => (Thickness)GetValue(ButtonBorderThicknessProperty);
             set => SetValue(ButtonBorderThicknessProperty, value);
+        }
+
+
+        public Brush ButtonForeground
+        {
+            get => (Brush)GetValue(ButtonForegroundProperty);
+            set => SetValue(ButtonForegroundProperty, value);
         }
 
 
