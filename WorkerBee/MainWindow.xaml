@@ -11,7 +11,8 @@
         Background="#FF202020">
     
     <Grid>
-        <ui:Button IsEnabled="False"
+        
+        <ui:Button
             LabelText="Test button"
             ImageSource="/LadyBugUI;component/Resources/Images/Icons/sliders/sliders_white.png"
             HorizontalAlignment="Center" VerticalAlignment="Center"/>

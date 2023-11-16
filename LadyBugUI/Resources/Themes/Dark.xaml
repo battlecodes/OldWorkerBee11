@@ -37,7 +37,7 @@
         </LinearGradientBrush.GradientStops>
     </LinearGradientBrush>
 
-    <!-- #Button -->
+    <!-- #Buttons -->
 
     <SolidColorBrush x:Key="ButtonForeground" Color="{StaticResource TextFillColorPrimary}"/>
     <SolidColorBrush x:Key="DisabledButtonBackground" Color="{StaticResource ControlFillColorDisabled}"/>
@@ -48,5 +48,9 @@
     <SolidColorBrush x:Key="PressedButtonBackground" Color="{StaticResource ControlFillColorTertiary}"/>
     <SolidColorBrush x:Key="PressedButtonBorderBrush" Color="{StaticResource ControlStrokeColorDefault}"/>
     <SolidColorBrush x:Key="PressedButtonForeground" Color="{StaticResource TextFillColorSecondary}"/>
+    
+    
+    <!-- #Labels -->
+    <SolidColorBrush x:Key="LabelForeground" Color="{StaticResource TextFillColorSecondary}"/>
 
 </ResourceDictionary>
