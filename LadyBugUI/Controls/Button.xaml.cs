@@ -293,7 +293,9 @@ namespace LadyBugUI.Controls
         }
 
 
-
+        /// <summary>
+        /// Executed when the button is clicked.
+        /// </summary>
         public ICommand ClickedCommand
         {
             get => (ICommand)GetValue(ClickedCommandProperty);
