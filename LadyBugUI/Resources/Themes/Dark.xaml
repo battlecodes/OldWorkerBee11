@@ -8,6 +8,7 @@
     <!-- #Colors -->
     
     <Color x:Key="ControlFillColorDefault">#0FFFFFFF</Color>
+    <Color x:Key="ControlFillColorSecondary">#15FFFFFF</Color>
 
     <Color x:Key="ControlStrokeColorDefault">#12FFFFFF</Color>
     <Color x:Key="ControlStrokeColorSecondary">#18FFFFFF</Color>
@@ -16,6 +17,9 @@
     
     <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource ControlFillColorDefault}"/>
     
+    <!-- #Button -->
+    <SolidColorBrush x:Key="MouseOverButtonBackground" Color="{StaticResource ControlFillColorSecondary}"/>
+
     <!-- #Elevation border brushes -->
 
     <LinearGradientBrush

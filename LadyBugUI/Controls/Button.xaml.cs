@@ -72,6 +72,14 @@ namespace LadyBugUI.Controls
                     double.NaN,
                     FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
+        public static readonly DependencyProperty MouseOverButtonBackgroundProperty =
+            DependencyProperty.Register(
+                "MouseOverButtonBackground",
+                typeof(Brush),
+                typeof(Button),
+                new PropertyMetadata(
+                    _rsc["MouseOverButtonBackground"]));
+
 
 
         public Brush ButtonBackground

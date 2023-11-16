@@ -23,6 +23,7 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
                                 <Border
+                                    x:Name="ButtonBorder"
                                     Height="{TemplateBinding Height}"
                                     Width="{TemplateBinding Width}"
                                     MinHeight="{TemplateBinding MinHeight}"
@@ -38,6 +39,13 @@
                                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                                 </Border>
+
+                                <ControlTemplate.Triggers>
+                                    <!-- Mouse over case -->
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="ButtonBorder" Property="Background" Value="{Binding MouseOverButtonBackground, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
                             </ControlTemplate>
                         </Setter.Value>
                     </Setter>
