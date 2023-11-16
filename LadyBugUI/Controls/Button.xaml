@@ -11,9 +11,9 @@
 
     <Grid>
         <Button
-            Height="Auto"
-            Width="Auto"
-            Background="LightGreen"
+            Height="{Binding ButtonHeight, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+            Width="{Binding ButtonWidth, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+            Background="{Binding ButtonBackground, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
             BorderBrush="Pink"
             BorderThickness="2">
             <Button.Style>
@@ -23,6 +23,8 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
                                 <Border
+                                    Height="{TemplateBinding Height}"
+                                    Width="{TemplateBinding Width}"
                                     MinHeight="{TemplateBinding MinHeight}"
                                     MinWidth="{TemplateBinding MinWidth}"
                                     Padding="{TemplateBinding Padding}"

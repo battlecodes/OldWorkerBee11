@@ -20,6 +20,65 @@ namespace LadyBugUI.Controls
     /// </summary>
     public partial class Button : UserControl
     {
+        // App level resource dictionary.
+        public static readonly ResourceDictionary _rsc =
+            new()
+            {
+                Source = new Uri("/LadyBugUI;component/Resources/Themes/Dark.xaml",
+                    UriKind.RelativeOrAbsolute),
+            };
+
+
+        // Dependency Properties
+        public static readonly DependencyProperty ButtonBackgroundProperty =
+            DependencyProperty.Register(
+                "ButtonBackground",
+                typeof(Brush),
+                typeof(Button),
+                new PropertyMetadata(
+                    _rsc["ButtonBackground"]));
+
+        public static readonly DependencyProperty ButtonHeightProperty =
+            DependencyProperty.Register(
+                "ButtonHeight",
+                typeof(double),
+                typeof(Button),
+                new FrameworkPropertyMetadata(
+                    double.NaN,
+                    FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+
+        public static readonly DependencyProperty ButtonWidthProperty =
+            DependencyProperty.Register(
+                "ButtonWidth",
+                typeof(double),
+                typeof(Button),
+                new FrameworkPropertyMetadata(
+                    double.NaN,
+                    FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+
+
+
+        public Brush ButtonBackground
+        {
+            get => (Brush)GetValue(ButtonBackgroundProperty);
+            set => SetValue(ButtonBackgroundProperty, value);
+        }
+
+
+        public double ButtonHeight
+        {
+            get => (double)GetValue(ButtonHeightProperty);
+            set => SetValue(ButtonHeightProperty, value);
+        }
+
+
+        public double ButtonWidth
+        {
+            get => (double)GetValue(ButtonWidthProperty);
+            set => SetValue(ButtonWidthProperty, value);
+        }
+
+
         public Button()
         {
             InitializeComponent();

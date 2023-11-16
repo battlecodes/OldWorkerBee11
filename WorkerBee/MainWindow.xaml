@@ -10,6 +10,7 @@
     
     <Grid>
         <ui:Button
+            ButtonBackground="Red"
             HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
     
