@@ -3,9 +3,9 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Variables.xaml"/>
     </ResourceDictionary.MergedDictionaries>
-    
-    
-    <!-- Default Styles -->
+
+
+    <!-- Default styles -->
     <Style x:Key="DefaultButtonStyle" TargetType="Button">
         <Setter Property="Padding" Value="11,5,11,6"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>

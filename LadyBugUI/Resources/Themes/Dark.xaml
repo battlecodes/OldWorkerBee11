@@ -2,8 +2,30 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 
+    <Thickness x:Key="ButtonBorderThemeThickness">1</Thickness>
+
+
+    <!-- #Colors -->
+    
     <Color x:Key="ControlFillColorDefault">#0FFFFFFF</Color>
 
+    <Color x:Key="ControlStrokeColorDefault">#12FFFFFF</Color>
+    <Color x:Key="ControlStrokeColorSecondary">#18FFFFFF</Color>
+
+    <!-- #Brushes -->
+    
     <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource ControlFillColorDefault}"/>
+    
+    <!-- #Elevation border brushes -->
+
+    <LinearGradientBrush
+        x:Key="ControlElevationBorderBrush"
+        MappingMode="Absolute"
+        StartPoint="0,0" EndPoint="0,3">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.33" Color="{StaticResource ControlStrokeColorSecondary}"/>
+            <GradientStop Offset="1.0" Color="{StaticResource ControlStrokeColorDefault}"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
 
 </ResourceDictionary>
