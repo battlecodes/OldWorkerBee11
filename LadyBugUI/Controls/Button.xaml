@@ -75,8 +75,8 @@
             <!-- #Image -->
                 <Image
                 Grid.Column="0"
-                Source="/LadyBugUI;component/Resources/Images/Icons/sliders/sliders_white.png"
-                >
+                Source="{Binding ImageSource, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+                Visibility="{Binding ImageSource, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}, Converter={StaticResource NullToVis}}">
                     <Image.Style>
                         <Style TargetType="Image"
                                BasedOn="{StaticResource DefaultButtonImageStyle}"/>
@@ -86,12 +86,30 @@
                 <Label
                     Grid.Column="1"
                     Content="Test button"
-                    Foreground="{Binding ButtonForeground, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
                     FontSize="14"
                     FontWeight="Normal">
                     <Label.Style>
                         <Style TargetType="Label"
-                               BasedOn="{StaticResource DefaultButtonLabelStyle}"/>
+                               BasedOn="{StaticResource DefaultButtonLabelStyle}">
+                            <Setter Property="Foreground" Value="{Binding ButtonForeground, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
+
+                            <Style.Triggers>
+                                <!-- Mouse over case -->
+                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=IsMouseOver}" Value="True">
+                                    <Setter Property="Foreground" Value="{Binding MouseOverButtonForeground, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
+                                </DataTrigger>
+                                
+                                <!-- Disabled case -->
+                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=IsEnabled}" Value="False">
+                                    <Setter Property="Foreground" Value="{StaticResource DisabledButtonForeground}"/>
+                                </DataTrigger>
+                                
+                                <!-- Pressed case -->
+                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=IsPressed}" Value="True">
+                                    <Setter Property="Foreground" Value="{Binding PressedButtonForeground, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
                     </Label.Style>
                 </Label>
             

@@ -80,6 +80,13 @@ namespace LadyBugUI.Controls
                     double.NaN,
                     FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
+        public static readonly DependencyProperty ImageSourceProperty =
+            DependencyProperty.Register(
+                "ImageSource",
+                typeof(string),
+                typeof(Button),
+                new PropertyMetadata(null));
+
         public static readonly DependencyProperty MouseOverButtonBackgroundProperty =
             DependencyProperty.Register(
                 "MouseOverButtonBackground",
@@ -96,6 +103,14 @@ namespace LadyBugUI.Controls
                 new PropertyMetadata(
                     _rsc["ControlElevationBorderBrush"]));
 
+        public static readonly DependencyProperty MouseOverButtonForegroundProperty =
+            DependencyProperty.Register(
+                "MouseOverButtonForeground",
+                typeof(Brush),
+                typeof(Button),
+                new PropertyMetadata(
+                    _rsc["MouseOverButtonForeground"]));
+
         public static readonly DependencyProperty PressedButtonBackgroundProperty =
             DependencyProperty.Register(
                 "PressedButtonBackground",
@@ -103,6 +118,14 @@ namespace LadyBugUI.Controls
                 typeof(Button),
                 new PropertyMetadata(
                     _rsc["PressedButtonBackground"]));
+
+        public static readonly DependencyProperty PressedButtonForegroundProperty =
+            DependencyProperty.Register(
+                "PressedButtonForeground",
+                typeof(Brush),
+                typeof(Button),
+                new PropertyMetadata(
+                    _rsc["PressedButtonForeground"]));
 
 
 
@@ -148,6 +171,13 @@ namespace LadyBugUI.Controls
         }
 
 
+        public string ImageSource
+        {
+            get => (string)GetValue(ImageSourceProperty);
+            set => SetValue(ImageSourceProperty, value);
+        }
+
+
         public Brush MouseOverButtonBackground
         {
             get => (Brush)GetValue(MouseOverButtonBackgroundProperty);
@@ -162,10 +192,24 @@ namespace LadyBugUI.Controls
         }
 
 
+        public Brush MouseOverbuttonForeground
+        {
+            get => (Brush)(GetValue(MouseOverButtonForegroundProperty));
+            set => SetValue(MouseOverButtonForegroundProperty, value);
+        }
+
+
         public Brush PressedButtonBackground
         {
             get => (Brush)GetValue(PressedButtonBackgroundProperty);
             set => SetValue(PressedButtonBackgroundProperty, value);
+        }
+
+
+        public Brush PressedButtonForeground
+        {
+            get => (Brush)GetValue(PressedButtonForegroundProperty);
+            set => SetValue(PressedButtonForegroundProperty, value);
         }
 
 

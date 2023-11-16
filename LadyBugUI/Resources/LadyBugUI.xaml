@@ -4,6 +4,7 @@
 
         <ResourceDictionary.MergedDictionaries>
             <ResourceDictionary Source="Dictionaries/Buttons.xaml"/>
+            <ResourceDictionary Source="Dictionaries/Converters.xaml"/>
             <ResourceDictionary Source="Dictionaries/Variables.xaml"/>
 
             <ResourceDictionary Source="Themes/Dark.xaml"/>

@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lb="clr-namespace:LadyBugUI;assembly=LadyBugUI"
         xmlns:local="clr-namespace:WorkerBee"
         xmlns:ui="clr-namespace:LadyBugUI.Controls;assembly=LadyBugUI"
         mc:Ignorable="d"
@@ -11,7 +12,7 @@
     
     <Grid>
         <ui:Button
-            
+            ImageSource="/LadyBugUI;component/Resources/Images/Icons/sliders/sliders_white.png"
             HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
     
