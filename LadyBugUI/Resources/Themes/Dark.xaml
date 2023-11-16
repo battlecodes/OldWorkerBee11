@@ -9,6 +9,7 @@
     
     <Color x:Key="ControlFillColorDefault">#0FFFFFFF</Color>
     <Color x:Key="ControlFillColorSecondary">#15FFFFFF</Color>
+    <Color x:Key="ControlFillColorTertiary">#08FFFFFF</Color>
     <Color x:Key="ControlFillColorDisabled">#0BFFFFFF</Color>
 
     <Color x:Key="ControlStrokeColorDefault">#12FFFFFF</Color>
@@ -34,5 +35,7 @@
     <SolidColorBrush x:Key="DisabledButtonBackground" Color="{StaticResource ControlFillColorDisabled}"/>
     <SolidColorBrush x:Key="DisabledButtonBorderBrush" Color="{StaticResource ControlStrokeColorDefault}"/>
     <SolidColorBrush x:Key="MouseOverButtonBackground" Color="{StaticResource ControlFillColorSecondary}"/>
+    <SolidColorBrush x:Key="PressedButtonBackground" Color="{StaticResource ControlFillColorTertiary}"/>
+    <SolidColorBrush x:Key="PressedButtonBorderBrush" Color="{StaticResource ControlStrokeColorDefaults}"/>
 
 </ResourceDictionary>

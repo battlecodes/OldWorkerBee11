@@ -88,6 +88,15 @@ namespace LadyBugUI.Controls
                 new PropertyMetadata(
                     _rsc["ControlElevationBorderBrush"]));
 
+        public static readonly DependencyProperty PressedButtonBackgroundProperty =
+            DependencyProperty.Register(
+                "PressedButtonBackground",
+                typeof(Brush),
+                typeof(Button),
+                new PropertyMetadata(
+                    _rsc["PressedButtonBackground"]));
+
+
 
         public Brush ButtonBackground
         {
@@ -135,6 +144,13 @@ namespace LadyBugUI.Controls
         {
             get => (Brush)GetValue(MouseOverButtonBorderBrushProperty);
             set => SetValue(MouseOverButtonBorderBrushProperty, value);
+        }
+
+
+        public Brush PressedButtonBackground
+        {
+            get => (Brush)GetValue(PressedButtonBackgroundProperty);
+            set => SetValue(PressedButtonBackgroundProperty, value);
         }
 
 

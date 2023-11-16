@@ -10,7 +10,7 @@
     </UserControl.Resources>
 
     <Grid>
-        <Button IsEnabled="False"
+        <Button
             Height="{Binding ButtonHeight, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
             Width="{Binding ButtonWidth, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
             Background="{Binding ButtonBackground, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
@@ -51,6 +51,12 @@
                                     <Trigger Property="IsEnabled" Value="False">
                                         <Setter TargetName="ButtonBorder" Property="Background" Value="{StaticResource DisabledButtonBackground}"/>
                                         <Setter TargetName="ButtonBorder" Property="BorderBrush" Value="{StaticResource DisabledButtonBorderBrush}"/>
+                                    </Trigger>
+                                    
+                                    <!-- Pressed case -->
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter TargetName="ButtonBorder" Property="Background" Value="{Binding PressedButtonBackground, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"/>
+                                        <Setter TargetName="ButtonBorder" Property="BorderBrush" Value="{StaticResource PressedButtonBorderBrush}"/>
                                     </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
