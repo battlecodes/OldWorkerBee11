@@ -6,4 +6,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\Images\Icons\sliders\sliders_black.png" />
+    <None Remove="Resources\Images\Icons\sliders\sliders_white.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\Theme\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\sliders\sliders_black.png" />
+    <Resource Include="Resources\Images\Icons\sliders\sliders_white.png" />
+  </ItemGroup>
+
 </Project>
