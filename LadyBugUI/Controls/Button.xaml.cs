@@ -24,7 +24,7 @@ namespace LadyBugUI.Controls
         public static readonly ResourceDictionary _rsc =
             new()
             {
-                Source = new Uri("/LadyBugUI;component/Resources/Themes/Dark.xaml",
+                Source = new Uri("/LadyBugUI;component/Resources/LadyBugUI.xaml",
                     UriKind.RelativeOrAbsolute),
             };
 
@@ -86,6 +86,28 @@ namespace LadyBugUI.Controls
                 typeof(string),
                 typeof(Button),
                 new PropertyMetadata(null));
+
+        public static readonly DependencyProperty LabelFontSizeProperty =
+            DependencyProperty.Register(
+                "LabelFontSize",
+                typeof(double),
+                typeof(Button),
+                new PropertyMetadata(
+                    _rsc["ControlContentThemeFontSize"]));
+
+        public static readonly DependencyProperty LabelFontWeightProperty =
+            DependencyProperty.Register(
+                "LabelFontWeight",
+                typeof(FontWeight),
+                typeof(Button),
+                new PropertyMetadata(FontWeights.Normal));
+
+        public static readonly DependencyProperty LabelTextProperty =
+            DependencyProperty.Register(
+                "LabelText",
+                typeof(string),
+                typeof(Button),
+                new PropertyMetadata(string.Empty));
 
         public static readonly DependencyProperty MouseOverButtonBackgroundProperty =
             DependencyProperty.Register(
@@ -175,6 +197,27 @@ namespace LadyBugUI.Controls
         {
             get => (string)GetValue(ImageSourceProperty);
             set => SetValue(ImageSourceProperty, value);
+        }
+
+
+        public double LabelFontSize
+        {
+            get => (double)GetValue(LabelFontSizeProperty);
+            set => SetValue(LabelFontSizeProperty, value);
+        }
+
+
+        public FontWeight LabelFontWeight
+        {
+            get => (FontWeight)GetValue(LabelFontWeightProperty);
+            set => SetValue(LabelFontWeightProperty, value);
+        }
+
+
+        public string LabelText
+        {
+            get => (string)GetValue(LabelTextProperty);
+            set => SetValue(LabelTextProperty, value);
         }
 
 

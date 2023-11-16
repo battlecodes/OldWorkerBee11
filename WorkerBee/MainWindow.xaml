@@ -12,6 +12,7 @@
     
     <Grid>
         <ui:Button
+            LabelText="Test button"
             ImageSource="/LadyBugUI;component/Resources/Images/Icons/sliders/sliders_white.png"
             HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>

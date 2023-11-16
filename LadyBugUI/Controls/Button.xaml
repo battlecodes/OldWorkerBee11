@@ -85,9 +85,9 @@
 
                 <Label
                     Grid.Column="1"
-                    Content="Test button"
-                    FontSize="14"
-                    FontWeight="Normal">
+                    Content="{Binding LabelText, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+                    FontSize="{Binding LabelFontSize, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+                    FontWeight="{Binding LabelFontWeight, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}">
                     <Label.Style>
                         <Style TargetType="Label"
                                BasedOn="{StaticResource DefaultButtonLabelStyle}">
