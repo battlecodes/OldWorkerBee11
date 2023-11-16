@@ -80,6 +80,13 @@ namespace LadyBugUI.Controls
                     double.NaN,
                     FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
+        public static readonly DependencyProperty ClickedCommandProperty =
+            DependencyProperty.Register(
+                "ClickedCommand",
+                typeof(ICommand),
+                typeof(Button),
+                new PropertyMetadata(null));
+
         public static readonly DependencyProperty ImageSourceProperty =
             DependencyProperty.Register(
                 "ImageSource",
@@ -150,109 +157,147 @@ namespace LadyBugUI.Controls
                     _rsc["PressedButtonForeground"]));
 
 
-
+        /// <summary>
+        /// Background for the button.
+        /// </summary>
         public Brush ButtonBackground
         {
             get => (Brush)GetValue(ButtonBackgroundProperty);
             set => SetValue(ButtonBackgroundProperty, value);
         }
 
-
+        /// <summary>
+        /// Border for the button.
+        /// </summary>
         public Brush ButtonBorderBrush
         {
             get => (Brush)GetValue(ButtonBorderBrushProperty);
             set => SetValue(ButtonBorderBrushProperty, value);
         }
 
-
+        /// <summary>
+        ///  Border thickness for the button.
+        /// </summary>
         public Thickness ButtonBorderThickness
         {
             get => (Thickness)GetValue(ButtonBorderThicknessProperty);
             set => SetValue(ButtonBorderThicknessProperty, value);
         }
 
-
+        /// <summary>
+        /// Text fill for the button label.
+        /// </summary>
         public Brush ButtonForeground
         {
             get => (Brush)GetValue(ButtonForegroundProperty);
             set => SetValue(ButtonForegroundProperty, value);
         }
 
-
+        /// <summary>
+        /// Height of the button.
+        /// </summary>
         public double ButtonHeight
         {
             get => (double)GetValue(ButtonHeightProperty);
             set => SetValue(ButtonHeightProperty, value);
         }
 
-
+        /// <summary>
+        /// Width of the button.
+        /// </summary>
         public double ButtonWidth
         {
             get => (double)GetValue(ButtonWidthProperty);
             set => SetValue(ButtonWidthProperty, value);
         }
 
-
+        /// <summary>
+        /// Location of the button's image source.
+        /// </summary>
         public string ImageSource
         {
             get => (string)GetValue(ImageSourceProperty);
             set => SetValue(ImageSourceProperty, value);
         }
 
-
+        /// <summary>
+        /// Size of the button label's text.
+        /// </summary>
         public double LabelFontSize
         {
             get => (double)GetValue(LabelFontSizeProperty);
             set => SetValue(LabelFontSizeProperty, value);
         }
 
-
+        /// <summary>
+        /// Weight of the button label's font.
+        /// </summary>
         public FontWeight LabelFontWeight
         {
             get => (FontWeight)GetValue(LabelFontWeightProperty);
             set => SetValue(LabelFontWeightProperty, value);
         }
 
-
+        /// <summary>
+        /// Text for the button's label.
+        /// </summary>
         public string LabelText
         {
             get => (string)GetValue(LabelTextProperty);
             set => SetValue(LabelTextProperty, value);
         }
 
-
+        /// <summary>
+        /// Backgronud for the button on mouse over.
+        /// </summary>
         public Brush MouseOverButtonBackground
         {
             get => (Brush)GetValue(MouseOverButtonBackgroundProperty);
             set => SetValue(MouseOverButtonBackgroundProperty, value);
         }
 
-
+        /// <summary>
+        /// Border brush for the button on mouse over.
+        /// </summary>
         public Brush MouseOverButtonBorderBrush
         {
             get => (Brush)GetValue(MouseOverButtonBorderBrushProperty);
             set => SetValue(MouseOverButtonBorderBrushProperty, value);
         }
 
-
+        /// <summary>
+        /// Text fill for the button label on mouse over.
+        /// </summary>
         public Brush MouseOverbuttonForeground
         {
             get => (Brush)(GetValue(MouseOverButtonForegroundProperty));
             set => SetValue(MouseOverButtonForegroundProperty, value);
         }
 
-
+        /// <summary>
+        /// Background for the button when pressed.
+        /// </summary>
         public Brush PressedButtonBackground
         {
             get => (Brush)GetValue(PressedButtonBackgroundProperty);
             set => SetValue(PressedButtonBackgroundProperty, value);
         }
 
-
+        /// <summary>
+        /// Text fill for the button label when pressed.
+        /// </summary>
         public Brush PressedButtonForeground
         {
             get => (Brush)GetValue(PressedButtonForegroundProperty);
             set => SetValue(PressedButtonForegroundProperty, value);
+        }
+
+
+
+        public ICommand ClickedCommand
+        {
+            get => (ICommand)GetValue(ClickedCommandProperty);
+            set => SetValue(ClickedCommandProperty, value);
         }
 
 

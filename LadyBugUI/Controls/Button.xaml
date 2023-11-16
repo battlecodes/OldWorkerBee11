@@ -15,7 +15,8 @@
             Width="{Binding ButtonWidth, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
             Background="{Binding ButtonBackground, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
             BorderBrush="{Binding ButtonBorderBrush, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
-            BorderThickness="{Binding ButtonBorderThickness, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}">
+            BorderThickness="{Binding ButtonBorderThickness, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}"
+            Command="{Binding ClickedCommand, RelativeSource={RelativeSource FindAncestor, AncestorType=UserControl}}">
             <Button.Style>
                 <Style TargetType="Button"
                        BasedOn="{StaticResource DefaultButtonStyle}">
